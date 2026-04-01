@@ -77,7 +77,7 @@ export default function LocationsPage() {
               We cover a wider area than listed above. Call Kevin Quinn to check if we can reach your postcode — no obligation.
             </p>
             <a
-              href="tel:REPLACE_WITH_PHONE"
+              href="tel:+447845463877"
               className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accentDim text-white font-body font-medium text-sm uppercase tracking-wide px-6 py-3 rounded-lg transition-colors"
             >
               Call to Check Coverage

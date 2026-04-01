@@ -27,7 +27,7 @@ export function ServiceSchema({
       '@id': `${BASE_URL}/#business`,
       name: 'Local Roof Cleaning UK',
       url: BASE_URL,
-      telephone: 'REPLACE_WITH_PHONE',
+      telephone: '+44 7845 463877',
     },
     areaServed: {
       '@type': 'AdministrativeArea',

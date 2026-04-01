@@ -116,7 +116,7 @@ function SiteSchemas() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: 'REPLACE_WITH_PHONE',
+      telephone: '+44 7845 463877',
       contactType: 'customer service',
       areaServed: 'GB',
       availableLanguage: 'English',

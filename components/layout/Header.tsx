@@ -127,11 +127,11 @@ export function Header() {
           {/* Right: phone + CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:REPLACE_WITH_PHONE"
+              href="tel:+447845463877"
               className="flex items-center gap-2 font-mono text-sm text-brand-gold hover:text-brand-text1 transition-colors"
             >
               <Phone size={14} />
-              REPLACE_WITH_PHONE
+              +44 7845 463877
             </a>
             <Link
               href="/contact"

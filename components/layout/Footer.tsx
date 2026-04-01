@@ -107,12 +107,12 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:REPLACE_WITH_PHONE"
+                  href="tel:+447845463877"
                   className="flex items-start gap-3 text-brand-text3 hover:text-brand-gold transition-colors text-sm group"
                 >
                   <Phone size={16} className="mt-0.5 shrink-0 text-brand-gold" />
                   <div>
-                    <div className="font-mono text-brand-gold group-hover:text-brand-text1 transition-colors">REPLACE_WITH_PHONE</div>
+                    <div className="font-mono text-brand-gold group-hover:text-brand-text1 transition-colors">+44 7845 463877</div>
                     <div className="text-brand-text3 text-xs mt-0.5">Kevin Quinn — call any time</div>
                   </div>
                 </a>

@@ -62,7 +62,7 @@ export default function WindowCleaningPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary">Get a Free Quote</Link>
-            <a href="tel:REPLACE_WITH_PHONE" className="btn-ghost">Call Kevin Quinn</a>
+            <a href="tel:+447845463877" className="btn-ghost">Call Kevin Quinn</a>
           </div>
         </div>
       </section>

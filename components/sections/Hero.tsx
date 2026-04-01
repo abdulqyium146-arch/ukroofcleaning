@@ -80,7 +80,7 @@ export function Hero() {
               <ArrowRight size={16} />
             </Link>
             <a
-              href="tel:REPLACE_WITH_PHONE"
+              href="tel:+447845463877"
               className="inline-flex items-center gap-2 border border-brand-border hover:border-brand-border2 text-brand-text1 font-body font-medium text-sm uppercase tracking-wide px-7 py-4 rounded-lg transition-all duration-200 min-h-[52px]"
             >
               <Phone size={16} className="text-brand-gold" />

@@ -71,12 +71,12 @@ export default function ContactPage() {
               Contact Details
             </h2>
             <div className="space-y-4">
-              <a href="tel:REPLACE_WITH_PHONE" className="flex items-start gap-4 bg-brand-surface border border-brand-border rounded-xl p-5 hover:border-brand-border2 transition-colors group">
+              <a href="tel:+447845463877" className="flex items-start gap-4 bg-brand-surface border border-brand-border rounded-xl p-5 hover:border-brand-border2 transition-colors group">
                 <div className="w-10 h-10 rounded-lg bg-brand-accent/10 flex items-center justify-center shrink-0">
                   <Phone size={18} className="text-brand-accent" />
                 </div>
                 <div>
-                  <div className="font-mono text-sm text-brand-gold group-hover:text-brand-text1 transition-colors mb-0.5">REPLACE_WITH_PHONE</div>
+                  <div className="font-mono text-sm text-brand-gold group-hover:text-brand-text1 transition-colors mb-0.5">+44 7845 463877</div>
                   <div className="text-brand-text3 text-xs">Kevin Quinn — call any time</div>
                 </div>
               </a>

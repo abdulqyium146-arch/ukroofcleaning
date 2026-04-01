@@ -86,7 +86,7 @@ export default async function LocationPage({ params }: Props) {
               Get a Free Quote in {location.name}
               <ArrowRight size={16} />
             </Link>
-            <a href="tel:REPLACE_WITH_PHONE" className="btn-ghost">
+            <a href="tel:+447845463877" className="btn-ghost">
               Call Kevin Quinn
             </a>
           </div>

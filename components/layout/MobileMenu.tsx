@@ -132,7 +132,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
         {/* Footer CTAs */}
         <div className="p-6 border-t border-brand-border space-y-3">
           <a
-            href="tel:REPLACE_WITH_PHONE"
+            href="tel:+447845463877"
             className="flex items-center gap-3 w-full bg-brand-accent hover:bg-brand-accentDim text-white font-body font-medium uppercase tracking-wide text-sm px-5 py-3 rounded-lg transition-colors justify-center"
           >
             <Phone size={16} />

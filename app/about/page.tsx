@@ -109,7 +109,7 @@ export default function AboutPage() {
             No call centres. Call or message directly and get a straight answer about your roof.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:REPLACE_WITH_PHONE" className="btn-primary">
+            <a href="tel:+447845463877" className="btn-primary">
               <Phone size={16} />
               Call Now
             </a>

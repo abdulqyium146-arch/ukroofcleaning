@@ -28,7 +28,7 @@ export function LocalBusinessSchema({
     name,
     description,
     url,
-    telephone: 'REPLACE_WITH_PHONE',
+    telephone: '+44 7845 463877',
     email: 'REPLACE_WITH_EMAIL',
     founder: {
       '@type': 'Person',

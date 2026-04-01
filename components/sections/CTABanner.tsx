@@ -22,11 +22,11 @@ export function CTABanner({ location }: Props) {
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a
-            href="tel:REPLACE_WITH_PHONE"
+            href="tel:+447845463877"
             className="inline-flex items-center gap-3 bg-white text-brand-accent hover:bg-brand-text1 font-body font-medium text-base uppercase tracking-wide px-8 py-4 rounded-lg transition-all duration-200 min-h-[56px] shadow-lg shadow-black/20"
           >
             <Phone size={18} />
-            Call Now — REPLACE_WITH_PHONE
+            Call Now — +44 7845 463877
           </a>
           <Link
             href="/contact"
