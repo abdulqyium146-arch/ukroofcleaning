@@ -1,26 +1,168 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand colors */
+  --color-brand-bg:        #080809;
+  --color-brand-surface:   #111113;
+  --color-brand-surface2:  #1A1A1E;
+  --color-brand-border:    #242428;
+  --color-brand-border2:   #303036;
+  --color-brand-accent:    #E8622A;
+  --color-brand-accentDim: #C45222;
+  --color-brand-gold:      #C4973E;
+  --color-brand-text1:     #EEEEE8;
+  --color-brand-text2:     #999993;
+  --color-brand-text3:     #666662;
+  --color-brand-success:   #2D7A4F;
+
+  /* Font families */
+  --font-display: var(--font-display-var), sans-serif;
+  --font-body:    var(--font-body-var), sans-serif;
+  --font-mono:    var(--font-mono-var), monospace;
+}
+
+/* Keyframe animations */
+@keyframes fadeUp {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* CSS custom properties for direct usage */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg:          #080809;
+  --color-surface:     #111113;
+  --color-surface-2:   #1A1A1E;
+  --color-border:      #242428;
+  --color-border-2:    #303036;
+  --color-accent:      #E8622A;
+  --color-accent-dim:  #C45222;
+  --color-gold:        #C4973E;
+  --color-text-1:      #EEEEE8;
+  --color-text-2:      #999993;
+  --color-text-3:      #666662;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Diagonal grid background */
+.bg-grid {
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border-2); border-radius: 3px; }
+
+/* Button utility classes */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-height: 48px;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-dim);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-text-1);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  min-height: 48px;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  border-color: var(--color-border-2);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 48px;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: white;
 }

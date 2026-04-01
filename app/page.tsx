@@ -1,65 +1,59 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import { Hero } from '@/components/sections/Hero'
+import { StatsBar } from '@/components/sections/StatsBar'
+import { ServiceCards } from '@/components/sections/ServiceCards'
+import { LocationsGrid } from '@/components/sections/LocationsGrid'
+import { ProcessSteps } from '@/components/sections/ProcessSteps'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { CTABanner } from '@/components/sections/CTABanner'
+import { FAQSection } from '@/components/sections/FAQSection'
+import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Local Roof Cleaning UK | North West England',
+  description: 'Professional roof cleaning across North West England. Moss removal, algae treatment & soft-wash roof cleaning in Chorley, Leyland, Morecambe, Fleetwood and more. 12 years experience.',
+  alternates: { canonical: 'https://localroofcleaning.uk' },
+}
+
+const homeFaqs = [
+  {
+    question: 'What areas do you cover for roof cleaning?',
+    answer: 'We cover North West England including Chorley, Leyland, Clitheroe, Fleetwood, Morecambe, Congleton, Ormskirk and Carnforth — plus surrounding villages. Call us to confirm your postcode.',
+  },
+  {
+    question: 'How much does roof cleaning cost?',
+    answer: 'Most residential roof cleans range from £280–£700 depending on roof size, pitch and the degree of moss/algae growth. We provide free no-obligation quotes for every property.',
+  },
+  {
+    question: 'Is soft-wash safe for my roof tiles?',
+    answer: 'Yes — our low-pressure soft-wash method is safe for all tile types including concrete, clay, slate and natural stone. We never use high-pressure washing which can dislodge or damage tiles.',
+  },
+  {
+    question: 'How long does roof cleaning last?',
+    answer: 'With our biocidal post-treatment, most roofs remain clean for 3–5 years. The treatment kills moss and algae at the root and significantly slows regrowth.',
+  },
+  {
+    question: 'Do you offer gutter clearing and window cleaning too?',
+    answer: 'Yes — we offer a full exterior cleaning service including gutter clearing and window cleaning. Many customers combine services and save on the overall cost.',
+  },
+]
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <>
+      <LocalBusinessSchema
+        description="Professional roof cleaning across North West England. Moss removal, algae treatment & soft-wash roof cleaning. 12 years experience."
+        url="https://localroofcleaning.uk"
+        areaServed="North West England"
+      />
+      <Hero />
+      <StatsBar />
+      <ServiceCards />
+      <LocationsGrid />
+      <ProcessSteps />
+      <Testimonials />
+      <FAQSection faqs={homeFaqs} />
+      <CTABanner />
+    </>
+  )
 }
