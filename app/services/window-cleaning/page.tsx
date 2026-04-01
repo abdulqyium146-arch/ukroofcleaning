@@ -5,18 +5,40 @@ import { getServiceBySlug } from '@/lib/services'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { CTABanner } from '@/components/sections/CTABanner'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ServiceSchema } from '@/components/seo/ServiceSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
 export const metadata: Metadata = {
   title: 'Window Cleaning Services | North West England',
   description: 'Professional window cleaning across North West England. Pure water, streak-free results. 12 years experience. Free quotes available.',
   alternates: { canonical: 'https://localroofcleaning.uk/services/window-cleaning' },
+  openGraph: {
+    title: 'Window Cleaning Services | North West England',
+    description: 'Professional window cleaning across North West England. Pure water, streak-free results. 12 years experience.',
+    url: 'https://localroofcleaning.uk/services/window-cleaning',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Window Cleaning Services — North West England' }],
+  },
 }
+
+const faqs = [
+  { question: 'What is pure water window cleaning?', answer: 'Pure water cleaning uses highly purified water delivered through a telescopic pole and brush system. Because the water contains no minerals or dissolved solids, it evaporates without leaving spots or streaks — giving a superior finish compared to traditional squeegee cleaning.' },
+  { question: 'How high can you reach for window cleaning?', answer: 'Our pure water pole systems can reach windows up to 4 storeys high safely from the ground, removing the need for ladders on most residential properties.' },
+  { question: 'How often should windows be professionally cleaned?', answer: 'Most residential customers clean every 4–8 weeks. The frequency depends on your location, surrounding environment and personal preference.' },
+  { question: 'Do you clean conservatory roofs too?', answer: 'Yes — our pure water system is ideal for conservatory roofs, removing algae, grime and hard water deposits safely without the need for ladders or scaffolding.' },
+]
 
 export default function WindowCleaningPage() {
   const service = getServiceBySlug('window-cleaning')!
 
   return (
     <>
+      <ServiceSchema
+        name="Window Cleaning"
+        description={service.longDesc}
+        url="https://localroofcleaning.uk/services/window-cleaning"
+        serviceType="Window Cleaning"
+      />
+      <FAQSchema faqs={faqs} />
       <BreadcrumbSchema crumbs={[
         { name: 'Home', url: '/' },
         { name: 'Services', url: '/services' },

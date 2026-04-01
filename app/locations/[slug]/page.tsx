@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { getLocationBySlug, generateStaticParams, locations } from '@/lib/locations'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 import { ServiceCards } from '@/components/sections/ServiceCards'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { NearbyAreas } from '@/components/sections/NearbyAreas'
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: location.metaTitle,
       description: location.metaDescription,
       url: `https://localroofcleaning.uk/locations/${location.slug}`,
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: `Roof Cleaning ${location.name} — Local Roof Cleaning UK` }],
     },
   }
 }
@@ -52,7 +54,10 @@ export default async function LocationPage({ params }: Props) {
         description={location.intro}
         url={`https://localroofcleaning.uk/locations/${location.slug}`}
         areaServed={`${location.name}, ${location.county}`}
+        addressLocality={location.name}
+        addressRegion={location.county}
       />
+      <FAQSchema faqs={location.faqs} />
       <BreadcrumbSchema crumbs={[
         { name: 'Home', url: '/' },
         { name: 'Locations', url: '/locations' },

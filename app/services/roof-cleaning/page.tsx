@@ -7,11 +7,19 @@ import { CTABanner } from '@/components/sections/CTABanner'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
+import { ServiceSchema } from '@/components/seo/ServiceSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
 export const metadata: Metadata = {
   title: 'Roof Cleaning Services | North West England',
   description: 'Professional roof cleaning across North West England. Moss removal, algae treatment, soft-wash & biocidal protection. 12 years experience. Free no-obligation quotes.',
   alternates: { canonical: 'https://localroofcleaning.uk/services/roof-cleaning' },
+  openGraph: {
+    title: 'Roof Cleaning Services | North West England',
+    description: 'Professional roof cleaning across North West England. Moss removal, algae treatment, soft-wash & biocidal protection. 12 years experience.',
+    url: 'https://localroofcleaning.uk/services/roof-cleaning',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Roof Cleaning Services — North West England' }],
+  },
 }
 
 const faqs = [
@@ -29,9 +37,15 @@ export default function RoofCleaningPage() {
       <LocalBusinessSchema
         description={service.longDesc}
         url="https://localroofcleaning.uk/services/roof-cleaning"
-        areaServed="North West England"
         serviceType="Roof Cleaning"
       />
+      <ServiceSchema
+        name="Roof Cleaning"
+        description={service.longDesc}
+        url="https://localroofcleaning.uk/services/roof-cleaning"
+        serviceType="Roof Cleaning"
+      />
+      <FAQSchema faqs={faqs} />
       <BreadcrumbSchema crumbs={[
         { name: 'Home', url: '/' },
         { name: 'Services', url: '/services' },

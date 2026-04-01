@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#080809"/>
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Accent glow -->
+  <ellipse cx="300" cy="200" rx="400" ry="300" fill="#E8622A" opacity="0.06"/>
+  <!-- Border -->
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="none" stroke="#E8622A" stroke-width="2" opacity="0.4"/>
+  <!-- Logo text -->
+  <text x="80" y="180" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="#FFFFFF" letter-spacing="2" text-transform="uppercase">LOCAL ROOF</text>
+  <text x="80" y="270" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="#E8622A" letter-spacing="2">CLEANING UK</text>
+  <!-- Tagline -->
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="28" fill="#AAAAAA" letter-spacing="1">Professional Roof Cleaning · North West England</text>
+  <!-- Stats bar -->
+  <rect x="80" y="400" width="1040" height="1" fill="#333333"/>
+  <text x="80"  y="455" font-family="Arial, sans-serif" font-size="22" fill="#C4973E" font-weight="bold">12 YRS</text>
+  <text x="80"  y="480" font-family="Arial, sans-serif" font-size="16" fill="#777777">Experience</text>
+  <text x="270" y="455" font-family="Arial, sans-serif" font-size="22" fill="#C4973E" font-weight="bold">500+</text>
+  <text x="270" y="480" font-family="Arial, sans-serif" font-size="16" fill="#777777">Roofs Cleaned</text>
+  <text x="460" y="455" font-family="Arial, sans-serif" font-size="22" fill="#C4973E" font-weight="bold">8 TOWNS</text>
+  <text x="460" y="480" font-family="Arial, sans-serif" font-size="16" fill="#777777">Covered</text>
+  <text x="680" y="455" font-family="Arial, sans-serif" font-size="22" fill="#C4973E" font-weight="bold">5★ RATED</text>
+  <text x="680" y="480" font-family="Arial, sans-serif" font-size="16" fill="#777777">Service</text>
+  <!-- Domain -->
+  <text x="1120" y="570" font-family="Arial, sans-serif" font-size="18" fill="#555555" text-anchor="end">localroofcleaning.uk</text>
+</svg>

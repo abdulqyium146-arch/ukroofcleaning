@@ -8,11 +8,17 @@ import { Testimonials } from '@/components/sections/Testimonials'
 import { CTABanner } from '@/components/sections/CTABanner'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
 export const metadata: Metadata = {
   title: 'Local Roof Cleaning UK | North West England',
   description: 'Professional roof cleaning across North West England. Moss removal, algae treatment & soft-wash roof cleaning in Chorley, Leyland, Morecambe, Fleetwood and more. 12 years experience.',
   alternates: { canonical: 'https://localroofcleaning.uk' },
+  openGraph: {
+    title: 'Local Roof Cleaning UK | North West England',
+    description: 'Professional roof cleaning across North West England. Moss removal, algae treatment & soft-wash roof cleaning. 12 years experience. Free quotes.',
+    url: 'https://localroofcleaning.uk',
+  },
 }
 
 const homeFaqs = [
@@ -44,8 +50,8 @@ export default function HomePage() {
       <LocalBusinessSchema
         description="Professional roof cleaning across North West England. Moss removal, algae treatment & soft-wash roof cleaning. 12 years experience."
         url="https://localroofcleaning.uk"
-        areaServed="North West England"
       />
+      <FAQSchema faqs={homeFaqs} />
       <Hero />
       <StatsBar />
       <ServiceCards />

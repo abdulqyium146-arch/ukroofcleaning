@@ -5,18 +5,40 @@ import { getServiceBySlug } from '@/lib/services'
 import { ProcessSteps } from '@/components/sections/ProcessSteps'
 import { CTABanner } from '@/components/sections/CTABanner'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
+import { ServiceSchema } from '@/components/seo/ServiceSchema'
+import { FAQSchema } from '@/components/seo/FAQSchema'
 
 export const metadata: Metadata = {
   title: 'Gutter Clearing Services | North West England',
   description: 'Professional gutter clearing across North West England. Debris removal, downpipe flushing & inspection. 12 years experience. Free no-obligation quotes.',
   alternates: { canonical: 'https://localroofcleaning.uk/services/gutter-clearing' },
+  openGraph: {
+    title: 'Gutter Clearing Services | North West England',
+    description: 'Professional gutter clearing across North West England. Debris removal, downpipe flushing & inspection. 12 years experience.',
+    url: 'https://localroofcleaning.uk/services/gutter-clearing',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Gutter Clearing Services — North West England' }],
+  },
 }
+
+const faqs = [
+  { question: 'How often should gutters be cleared?', answer: 'Most homes benefit from gutter clearing once or twice a year — typically in autumn after leaf fall, and in spring. Properties with overhanging trees may need more frequent clearing.' },
+  { question: 'What does gutter clearing include?', answer: 'We remove all debris (leaves, moss, dirt) from the gutters, flush with water to check flow, clear any blockages in downpipes, and inspect for damage or misalignment.' },
+  { question: 'Can blocked gutters damage my home?', answer: 'Yes — overflowing gutters can cause damp penetration, fascia rot, and foundation issues over time. Regular clearing is far cheaper than the repairs caused by water damage.' },
+  { question: 'Do you combine gutter clearing with roof cleaning?', answer: 'Yes — many customers combine roof cleaning with gutter clearing for a complete exterior clean. We offer a combined service at a discounted rate.' },
+]
 
 export default function GutterClearingPage() {
   const service = getServiceBySlug('gutter-clearing')!
 
   return (
     <>
+      <ServiceSchema
+        name="Gutter Clearing"
+        description={service.longDesc}
+        url="https://localroofcleaning.uk/services/gutter-clearing"
+        serviceType="Gutter Clearing"
+      />
+      <FAQSchema faqs={faqs} />
       <BreadcrumbSchema crumbs={[
         { name: 'Home', url: '/' },
         { name: 'Services', url: '/services' },
