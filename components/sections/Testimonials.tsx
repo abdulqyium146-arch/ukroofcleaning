@@ -27,9 +27,9 @@ const testimonials = [
 
 function Stars({ count }: { count: number }) {
   return (
-    <div className="flex gap-0.5">
+    <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`} role="img">
       {Array.from({ length: count }).map((_, i) => (
-        <Star key={i} size={14} className="text-brand-gold fill-brand-gold" />
+        <Star key={i} size={14} className="text-brand-gold fill-brand-gold" aria-hidden="true" />
       ))}
     </div>
   )

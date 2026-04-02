@@ -75,7 +75,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
           </span>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg hover:bg-brand-surface transition-colors text-brand-text2"
+            className="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-brand-surface transition-colors text-brand-text2"
             aria-label="Close menu"
           >
             <X size={20} />
@@ -90,7 +90,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
                 <>
                   <button
                     onClick={() => setOpenSection(openSection === link.label ? null : link.label)}
-                    className="w-full flex items-center justify-between px-6 py-3 text-brand-text1 font-body font-medium uppercase tracking-wide text-sm hover:text-brand-accent transition-colors"
+                    className="w-full flex items-center justify-between px-6 py-3 min-h-[44px] text-brand-text1 font-body font-medium uppercase tracking-wide text-sm hover:text-brand-accent transition-colors"
                   >
                     {link.label}
                     <ChevronDown
@@ -108,7 +108,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
                           key={child.href}
                           href={child.href}
                           onClick={onClose}
-                          className="block px-10 py-2.5 text-brand-text2 text-sm hover:text-brand-accent transition-colors"
+                          className="block px-10 py-3 min-h-[44px] flex items-center text-brand-text2 text-sm hover:text-brand-accent transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -120,7 +120,7 @@ export function MobileMenu({ isOpen, onClose }: Props) {
                 <Link
                   href={link.href}
                   onClick={onClose}
-                  className="block px-6 py-3 text-brand-text1 font-body font-medium uppercase tracking-wide text-sm hover:text-brand-accent transition-colors"
+                  className="block px-6 py-3 min-h-[44px] flex items-center text-brand-text1 font-body font-medium uppercase tracking-wide text-sm hover:text-brand-accent transition-colors"
                 >
                   {link.label}
                 </Link>

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { locations } from '@/lib/locations'
 
 // Update this date whenever page content is meaningfully changed
-const SITE_PUBLISHED = new Date('2025-04-01')
+const SITE_PUBLISHED = new Date('2026-04-02')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://localroofcleaning.uk'

@@ -29,7 +29,6 @@ export function LocalBusinessSchema({
     description,
     url,
     telephone: '+44 7845 463877',
-    email: 'REPLACE_WITH_EMAIL',
     founder: {
       '@type': 'Person',
       name: 'Kevin Quinn',

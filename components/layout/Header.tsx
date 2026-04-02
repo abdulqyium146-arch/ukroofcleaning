@@ -144,7 +144,7 @@ export function Header() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(true)}
-            className="md:hidden p-2 text-brand-text2 hover:text-brand-text1 transition-colors"
+            className="md:hidden p-3 -mr-1 text-brand-text2 hover:text-brand-text1 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Open menu"
           >
             <Menu size={22} />

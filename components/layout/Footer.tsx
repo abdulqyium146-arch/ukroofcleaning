@@ -141,6 +141,21 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Partner bar */}
+      <div className="border-t border-brand-border">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+          <span className="text-brand-text3 text-xs">Trusted partner:</span>
+          <a
+            href="https://rrmexternalcleaningspecialist.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-accent hover:text-brand-accentDim text-xs font-medium transition-colors"
+          >
+            RRM External Cleaning Specialist
+          </a>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-brand-border">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">

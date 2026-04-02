@@ -6,10 +6,22 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/404',
+          '/500',
+        ],
       },
+      // Block AI training crawlers
+      { userAgent: 'GPTBot',       disallow: '/' },
+      { userAgent: 'ChatGPT-User', disallow: '/' },
+      { userAgent: 'CCBot',        disallow: '/' },
+      { userAgent: 'anthropic-ai', disallow: '/' },
+      { userAgent: 'Claude-Web',   disallow: '/' },
+      { userAgent: 'Omgilibot',    disallow: '/' },
+      { userAgent: 'FacebookBot',  disallow: '/' },
     ],
     sitemap: 'https://localroofcleaning.uk/sitemap.xml',
-    host: 'https://localroofcleaning.uk',
   }
 }

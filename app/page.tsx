@@ -1,14 +1,16 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { Hero } from '@/components/sections/Hero'
 import { StatsBar } from '@/components/sections/StatsBar'
 import { ServiceCards } from '@/components/sections/ServiceCards'
-import { LocationsGrid } from '@/components/sections/LocationsGrid'
-import { ProcessSteps } from '@/components/sections/ProcessSteps'
-import { Testimonials } from '@/components/sections/Testimonials'
-import { CTABanner } from '@/components/sections/CTABanner'
-import { FAQSection } from '@/components/sections/FAQSection'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 import { FAQSchema } from '@/components/seo/FAQSchema'
+
+const LocationsGrid = dynamic(() => import('@/components/sections/LocationsGrid').then(m => ({ default: m.LocationsGrid })))
+const ProcessSteps  = dynamic(() => import('@/components/sections/ProcessSteps').then(m => ({ default: m.ProcessSteps })))
+const Testimonials  = dynamic(() => import('@/components/sections/Testimonials').then(m => ({ default: m.Testimonials })))
+const FAQSection    = dynamic(() => import('@/components/sections/FAQSection').then(m => ({ default: m.FAQSection })))
+const CTABanner     = dynamic(() => import('@/components/sections/CTABanner').then(m => ({ default: m.CTABanner })))
 
 export const metadata: Metadata = {
   title: 'Local Roof Cleaning UK | North West England',
